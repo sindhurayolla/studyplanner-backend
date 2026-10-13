@@ -14,10 +14,13 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOriginPatterns(
-                                "http://localhost:5173","https://25eg505n04.netlify.app")
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*");
+                        .allowedOrigins(
+                                "http://localhost:5173",
+                                "https://25eg505n04.netlify.app",
+                                "https://helpful-gecko-1a8a6d.netlify.app",
+                                "https://studyplanner-frontend-teal.vercel.app")
+                        .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
+                        .allowedHeaders("Content-Type", "Authorization", "X-User-Id");
             }
         };
     }
