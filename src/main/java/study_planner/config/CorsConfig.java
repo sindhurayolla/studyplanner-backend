@@ -15,8 +15,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
                         .allowedOriginPatterns(
-                                "http://localhost:*",
-                                "https://*.netlify.app")
+                                "http://localhost:5173","https://25eg505n04.netlify.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*");
             }
